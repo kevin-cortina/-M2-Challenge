@@ -1,0 +1,145 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
+  version: "1.0.0"
+  title: "Swagger Petstore"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "MonthMath.swagger.io"
+basePath: "/v2"
+tags:
+- name: "MonthMath"
+  description: "Month and Math Challenge"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "MathSolution"
+  description: "properties about Math"
+- name: "Month"
+  description: "properties about month"
+  externalDocs:
+    description: "Find out more about our Application"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /add:
+    post:
+      tags:
+      - "add"
+      summary: "Add Calculation"
+      description: ""
+      operationId: "mathAddition"
+      consumes:
+      - "operand1"
+      - "operand2"
+      produces:
+      - "answer"
+      parameters:
+      - in: "operand1"
+        name: "operand2"
+        description: "operand 1 + operand 2"
+        required: true
+        schema:
+        - "https"
+        - "http"
+  /subtract:
+    post:  
+      tags:
+      - "subtract"
+      summary: "subtract Calculation"
+      description: ""
+      operationId: "mathSubtraction"
+      consumes:
+      - "operand1"
+      - "operand2"
+      produces:
+      - "answer"
+      parameters:
+      - in: "operand1"
+        name: "operand2"
+        description: "operand 1 - operand 2"
+        required: true
+        schema:
+        - "https"
+        - "http"
+  /multiply
+      tags:
+      - "multiply"
+      summary: "multiply Calculation"
+      description: ""
+      operationId: "mathMultiplication"
+      consumes:
+      - "operand1"
+      - "operand2"
+      produces:
+      - "answer"
+      parameters:
+      - in: "operand1"
+        name: "operand2"
+        description: "operand 1 * operand 2"
+        required: true
+        schema:
+        - "https"
+        - "http"
+  /divide
+      tags:
+      - "divide"
+      summary: "divide Calculation"
+      description: ""
+      operationId: "mathDivision"
+      consumes:
+      - "operand1"
+      - "operand2"
+      produces:
+      - "answer"
+      parameters:
+      - in: "operand1"
+        name: "operand2"
+        description: "operand 1 / operand 2"
+        required: true
+        schema:
+        - "https"
+        - "http"
+  /month/{monthNumber}
+        tags:
+      - "getMonthByNumber"
+      summary: "get month by specific month number"
+      description: ""
+      operationId: "getMonthByNumber"
+      consumes:
+      - "number"
+      produces:
+      - "name"
+      parameters:
+      - in: "number"
+        description: "go to the number id, receive corresponding month"
+        required: true
+        schema:
+        - "https"
+        - "http"
+  /randomMonth
+        tags:
+      - "getRandomMonth"
+      summary: "get random month"
+      description: ""
+      operationId: "getRandomMonth"
+      consumes:
+      - """
+      produces:
+      - "name"
+      parameters:
+      - in: "number"
+        description: "go to the link and get random month by number"
+        required: true
+        schema:
+        - "https"
+        - "http"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
